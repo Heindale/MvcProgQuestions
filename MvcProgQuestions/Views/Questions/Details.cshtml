@@ -1,0 +1,21 @@
+﻿@model MvcProgQuestions.Models.Question
+@{
+    ViewData["Title"] = Html.DisplayFor(model => model.Title);
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><a asp-action="Index">Задачи</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Html.DisplayFor(model => model.Title)</li>
+    </ol>
+</nav>
+
+<div>
+@*    <h4>@Html.DisplayFor(model => model.Title)</h4>
+    <hr />*@
+    <p>
+        @Html.DisplayFor(model => model.Description)
+    </p>
+</div>
+@*<div>
+    <a asp-action="Index">Вернуться назад</a>
+</div>*@

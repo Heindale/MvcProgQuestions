@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MvcProgQuestions.Models.Question>
+
+@{
+	ViewData["Title"] = "Задачи";
+}
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item active" aria-current="page">Задачи</li>
+	</ol>
+</nav>
+
+@*<h1>Задачи</h1>*@
+
+
+<div class="list-group">
+	@foreach (var item in Model)
+	{
+		<a asp-action="Details" asp-route-id="@item.Id"
+		   class="list-group-item list-group-item-action">
+			@Html.DisplayFor(modelItem => item.Title)
+		</a>
+	}
+</div>
